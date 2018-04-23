@@ -1,0 +1,40 @@
+{
+  "name": "vergy",
+  "version": "1.0.3",
+  "description": "Theme WordPress Vergy.Prime",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeonVP/vergy.pro.git"
+  },
+  "keywords": [
+    "theme",
+    "library",
+    "style"
+  ],
+  "author": "Vergy.Prime",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeonVP/vergy.pro/issues"
+  },
+  "homepage": "https://github.com/LeonVP/vergy.pro#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.7",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rsync": "0.0.8",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "vinyl-ftp": "^0.6.1"
+  }
+}
