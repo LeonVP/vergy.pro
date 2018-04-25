@@ -1,0 +1,303 @@
+@mixin ff
+  font-family: $ff-main-h2
+  font-size: 40px
+  color: rgb(207, 98, 19)
+  font-weight: bold
+
+// чистая кнопка
+@mixin press ($bg-color)
+  display: inline-block
+  padding: 15px 32px
+  background-color: $bg-color
+  font-family: $ff-main-h4
+  text-transform: uppercase
+  font-size: 18px
+  color: #fff
+  border: none
+  border-radius: 3px
+  transition: 0.3s
+  &:hover
+    background-color: lighten($bg-color, 12%)
+  &:active
+    background-color: darken($bg-color, 5%)
+    transition: 0.1s
+  &:visited
+    background-color: darken($bg-color, 12%)
+
+@mixin corn
+  width: 0
+  height: 0
+  float: right
+  text-align: center
+  border-style: solid
+  border-width: 0 30px 30px 0
+  border-color: transparent $red-color transparent transparent
+
+@mixin i-fa
+  float: left
+  margin: 21px 30px
+  font-size: 25px
+  color: $red-color
+
+/// Background Color Opacity
+/// @param {Color} $color [100%] - Color
+/// @param {Double} $opacity [0.85] - Opacity
+
+@mixin background-opacity($color: #000, $opacity: 0.85)
+  background: $color
+  background: rgba($color, $opacity)
+
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4))
+    text-shadow: $x $y $blur $color
+
+@mixin block-h1
+  @include text-shadow
+  margin-top: 5px
+  margin-bottom: 5px
+  padding-top: 10px
+  padding-bottom: 10px
+  text-align: center
+  font-family: $ff-main-h3
+  font-size: 4rem
+  color: $grey-color
+
+
+
+
+
+// Автоматическое центрирование
+// Чтобы быстро отцентрировать блочный элемент,
+// не беспокоясь о верхних и нижних отступах, которые уже были применены.
+@mixin push--auto
+ left: auto
+ right: auto
+ text-align: center
+ margin-left: auto
+ margin-right: auto
+ padding: 5px inherit
+// Псевдо
+// Когда вы используете ::before и ::after,
+// вы всегда нуждаетесь в этих трех строчках кода.
+// Используя этот миксин, вы сохраните свое время на их написание.
+@mixin pseudo($display: block, $pos: absolute, $content: '')
+  content: $content
+  display: $display
+  position: $pos
+// div::after
+//   @include pseudo
+//   top: -1rem; left: -1rem
+//   width: 1rem; height: 1rem
+
+//Cross browser CSS3 mixins
+
+                  // @mixin box-shadow($left, $top, $radius, $color) {
+                  // 	box-shadow: $left $top $radius $color
+                  // 	-webkit-box-shadow: $left $top $radius $color
+                  // 	-moz-box-shadow: $left $top $radius $color
+                  // }
+                  //
+                  // @mixin transition($property, $duration, $easing: linear) {
+                  // 	transition: $property $duration $easing
+                  // 	-webkit-transition: $property $duration $easing
+                  // 	-moz-transition: $property $duration $easing
+                  // }
+                  //
+                  // @mixin border-radius($radius) {
+                  // 	border-radius: $radius
+                  // 	-webkit-border-radius: $radius
+                  // 	-moz-border-radius: $radius
+                  // }
+                  //
+                  // @mixin border-radii($topleft, $topright, $bottomright, $bottomleft) {
+                  // 	border-top-left-radius: $topleft
+                  // 	border-top-right-radius: $topright
+                  // 	border-bottom-right-radius: $bottomright
+                  // 	border-bottom-left-radius: $bottomleft
+                  // 	-webkit-border-top-left-radius: $topleft
+                  // 	-webkit-border-top-right-radius: $topright
+                  // 	-webkit-border-bottom-right-radius: $bottomright
+                  // 	-webkit-border-bottom-left-radius: $bottomleft
+                  // 	-moz-border-radius-topleft: $topleft
+                  // 	-moz-border-radius-topright: $topright
+                  // 	-moz-border-radius-bottomright: $bottomright
+                  // 	-moz-border-radius-bottomleft: $bottomleft
+                  // }
+                  //
+                  // @mixin gradient($color1, $color2) {
+                  // 	background-color: $color1
+                  // 	filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$color1}, endColorstr=#{$color2});
+                  // 	background-image: -moz-linear-gradient(center top, $color1, $color2)
+                  // 	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($color1), to($color2))
+                  // }
+
+
+// Отзывчивое соотношение
+// Мы используем этот миксин для создания масштабируемых элементов
+// (обычно изображения/картинки заднего фона), чтобы поддерживать соотношение.
+      // @mixin responsive-ratio($x,$y, $pseudo: false) {
+      //   $padding: unquote( ( $y / $x ) * 100 + '%' )
+      //   @if $pseudo {
+      //    &:before {
+      //    @include pseudo($pos: relative)
+      //      width: 100%
+      //      padding-top: $padding
+      //    }
+      //      } @else {
+      //      padding-top: $padding
+      //    }
+      //    }
+
+// Например, вы можете написать код ниже и ваш блок будет иметь соотношение,
+// которое обычно используется в видео.
+//
+// div {
+//
+//   @include responsive-ratio(16,9);
+//
+// }
+
+// CSS треугольники
+// Этот миксин берет на себя все хлопоты по созданию треугольников,
+// которые вы можете видеть в большинстве стандартных подсказок,
+// без картинок, вы только задаете цвет, размер, направление и все.
+
+//@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false)
+//   @include pseudo($pos: $position)
+//   width: 0
+//   height: 0
+//   @if $round
+//     border-radius: 3px
+//   @if $direction == down
+//     border-left: $size solid transparent
+//     border-right: $size solid transparent
+//     border-top: $size solid $color
+//     margin-top: 0 - round( $size / 2.5 )
+//   @else if $direction == up
+//     border-left: $size solid transparent
+//     border-right: $size solid transparent
+//     border-bottom: $size solid $color
+//     margin-bottom: 0 - round( $size / 2.5 )
+//   @else if $direction == right
+//     border-top: $size solid transparent
+//     border-bottom: $size solid transparent
+//     border-left: $size solid $color
+//     margin-right: -$size
+//   @else if  $direction == left
+//     border-top: $size solid transparent
+//     border-bottom: $size solid transparent
+//     border-right: $size solid $color
+//     margin-left: -$size
+//
+// // Стили шрифта
+// // Переложите все проблемы установки шрифтов на этот миксин.
+// // (Предполагается, что вы уже установили шрифт),
+// // укажите резервные шрифты один раз и больше не беспокойтесь об этом.
+// @mixin font-source-sans($size: false, $colour: false, $weight: false,  $lh: false)
+//   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif
+//   @if $size
+//     font-size: $size
+//   @if $colour
+//     color: $colour
+//   @if $weight
+//     font-weight: $weight
+//   @if $lh
+//     line-height: $lh
+//
+// // Плейсхолдеры
+// // Утомляет устанавливать стили в определенных форматах. Этот миксин сделает это для вас сам.
+//         // @mixin input-placeholder
+//         //   &.placeholder { @content }
+//         //   &:-moz-placeholder { @content }
+//         //   &::-moz-placeholder { @content }
+//         //   &:-ms-input-placeholder { @content }
+//         //   &::-webkit-input-placeholder { @content }
+// // Если вы не знаете, как использовать @content, вот пример:
+// // input,
+// // textarea {
+// //   @include input-placeholder {
+// //    color: $grey;
+// //   }
+// // }
+//
+// // Медиа-запросы
+// // Миксин, который сохранит вам очень много времени!
+// // Вы можете использовать значения только в пикселях,
+// // но у нас есть также настройки контрольных точек по умолчанию,
+// // которые также работают, другие же – экономят время,
+// // сохраняя свои контрольные точки последовательно.
+//     // $breakpoints:
+//     // (
+//     //   "phone":        400px,
+//     //   "phone-wide":   480px,
+//     //   "phablet":      560px,
+//     //   "tablet-small": 640px,
+//     //   "tablet":       768px,
+//     //   "tablet-wide":  1024px,
+//     //   "desktop":      1248px,
+//     //   "desktop-wide": 1440px
+//     // )
+//
+//
+// @mixin mq($width, $type: min)
+//   @if map_has_key($breakpoints, $width)
+//    $width: map_get($breakpoints, $width)
+//    @if $type == max
+//     $width: $width - 1px
+//
+//    @media only screen and (#{$type}-width: $width)
+//     @content
+//
+// // Пример ниже показывает увеличение внутренних отступов и размера шрифта,
+// // когда вьюпорт становится больше 1024px.
+// // .site-header {
+// //   padding: 2rem;
+// //   font-size: 1.8rem;
+// //   @include mq('tablet-wide') {
+// //    padding-top: 4rem;
+// //    font-size: 2.4rem;
+// //   }
+// // }
+//
+// // Z-index
+// // Хотя технически это всего лишь функция, но я решил ее тоже добавить.
+// // В большом проекте бывает трудно уследить за всеми значениями индекса,
+// // а этот миксин поможет собрать их в одном месте.
+//           // @function z($name)
+//           //   @if index($z-indexes, $name)
+//           //    @return (length($z-indexes) - index($z-indexes, $name)) + 1
+//           //   @else
+//           //    @warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes}'
+//           //    @return null
+//           //
+//           // $z-indexes: (
+//           //   "outdated-browser",
+//           //   "modal",
+//           //   "site-header",
+//           //   "page-wrapper",
+//           //   "site-footer"
+//           // );
+// // Когда вы захотите использовать z-index, назовите его так же, как ваш класс,
+// // и добавьте в ваш файл переменных/настроек, как ниже.
+// // Вы никогда больше не будете иметь проблем с z-index: 9999999;.
+// // .site-header {
+// //   z-index: z('site-header');
+// // }
+//
+// // Аппаратные средства
+// // Простое и эффективное средство, когда вам нужно включить ускорение
+// // с помощью аппаратных средств для анимаций,
+// // сохраняя все быстрым, гладким и немерцающим.
+// @mixin hardware($backface: true, $perspective: 1000)
+//   @if $backface
+//    backface-visibility: hidden
+//    perspective: $perspective
+//
+// // Truncate
+// // Добавить усечение к элементу не так просто, как кажется,
+// // хотя это экономит время, когда вы включаете миксин,
+// // вы должны только указать границу и максимальную ширину
+// @mixin truncate($truncation-boundary)
+//   max-width: $truncation-boundary
+//   white-space: nowrap
+//   overflow: hidden
+//   text-overflow: ellipsis

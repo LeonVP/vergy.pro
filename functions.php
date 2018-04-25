@@ -122,6 +122,14 @@ add_action( 'widgets_init', 'vergy_widgets_init' );
 function vergy_scripts() {
 	wp_enqueue_style( 'vergy-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'style-bootstrap-dist', get_template_directory_uri() . '/dist/libs/bootstrap-style/css/bootstrap.min.css' );
+
+	wp_enqueue_style( 'style-fontawesome-dist', get_template_directory_uri() . '/dist/css/font-awesome.min.css' );
+
+	wp_enqueue_style( 'style-dist', get_template_directory_uri() . '/dist/css/style.css' );
+
+	wp_enqueue_script( 'vergy-bootstrap-js-dist', get_template_directory_uri() . '/dist/libs/bootstrap-style/js/bootstrap.min.js', array(), '4.0.0', true );
+
 	wp_enqueue_script( 'vergy-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'vergy-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
@@ -153,9 +161,13 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Load plugin TGM.
+ */
+require get_template_directory() . '/tgm/vergy.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-

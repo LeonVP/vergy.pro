@@ -20,7 +20,7 @@
 
 		if ( 'post' === get_post_type() ) :
 			?>
-			<div class="entry-meta">
+			<div class="con-entry-meta">
 				<?php
 				vergy_posted_on();
 				vergy_posted_by();
@@ -31,12 +31,12 @@
 
 	<?php vergy_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="con-entry-content">
 		<?php
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'vergy' ),
+				__( 'Continue reading<span class="con-screen-reader-text"> "%s"</span>', 'vergy' ),
 				array(
 					'span' => array(
 						'class' => array(),
@@ -47,7 +47,7 @@
 		) );
 
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'vergy' ),
+			'before' => '<div class="con-page-links">' . esc_html__( 'Pages:', 'vergy' ),
 			'after'  => '</div>',
 		) );
 		?>
