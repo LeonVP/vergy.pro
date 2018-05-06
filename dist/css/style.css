@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans|Comfortaa:300|Montserrat:300|Roboto+Mono|Tinos&subset=cyrillic,cyrillic-ext,latin-ext");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -11065,159 +11067,312 @@ a.text-dark:hover, a.text-dark:focus {
   .table-bordered td {
     border: 1px solid #dee2e6 !important; } }
 
-@font-face {
-  font-family: "roboto-example";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/RobotoRegular/RobotoRegular.eot");
-  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype"); }
+if(nav.toggled) .menu-menu-top-container ul {
+  display: block;
+  padding: 3px 10px;
+  border: 1px #469700 solid; }
 
-@font-face {
-  font-family: "roboto-example";
-  font-weight: bold;
-  font-style: normal;
-  src: url("../fonts/RobotoBold/RobotoBold.eot");
-  src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype"); }
+if(nav.toggled) .menu-menu-top-container ul li {
+  background-color: #F9C86E; }
 
-@font-face {
-  font-family: "roboto-example";
-  font-weight: light;
-  font-style: normal;
-  src: url("../fonts/Alegreya_Sans/AlegreyaSans-Light.eot");
-  src: url("../fonts/Alegreya_Sans/AlegreyaSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Alegreya_Sans/AlegreyaSans-Light.woff") format("woff"), url("../fonts/Alegreya_Sans/AlegreyaSans-Light.ttf") format("truetype"); }
+body {
+  background-color: #eaede8; }
 
-@font-face {
-  font-family: "roboto-example";
-  font-weight: medium;
-  font-style: normal;
-  src: url("../fonts/Alegreya_Sans/AlegreyaSans-Medium.eot");
-  src: url("../fonts/Alegreya_Sans/AlegreyaSans-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Alegreya_Sans/AlegreyaSans-Medium.woff") format("woff"), url("../fonts/Alegreya_Sans/AlegreyaSans-Medium.ttf") format("truetype"); }
+/* Header */
+#masthead {
+  display: block;
+  min-height: 350px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  width: 100%;
+  background-color: #FFF; }
 
-@font-face {
-  font-family: "roboto-example";
-  font-weight: medium;
-  font-style: normal;
-  src: url("../fonts/Montserrat/Montserrat-Medium.eot");
-  src: url("../fonts/Montserrat/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype"); }
+.line {
+  min-height: 50px;
+  position: relative;
+  margin-top: -1px;
+  background: url("../images/bottom-line-shadow-1.png") no-repeat top center;
+  -o-object-fit: cover;
+     object-fit: cover; }
 
-@font-face {
-  font-family: "roboto-example";
-  font-weight: light;
-  font-style: normal;
-  src: url("../fonts/Montserrat/Montserrat-Light.eot");
-  src: url("../fonts/Montserrat/Montserrat-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Light.ttf") format("truetype"); }
+.top-head {
+  position: relative;
+  min-height: 88px;
+  width: 100%;
+  margin: 0px auto;
+  background: url("../images/top-line-shadow.png") no-repeat center bottom;
+  -o-object-fit: cover;
+     object-fit: cover; }
 
-@font-face {
-  font-family: "roboto-example";
-  font-weight: bold;
-  font-style: normal;
-  src: url("../fonts/Montserrat/Montserrat-Bold.eot");
-  src: url("../fonts/Montserrat/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype"); }
+.custom-logo {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%); }
 
-@font-face {
-  font-family: "roboto-example";
-  font-weight: medium;
-  font-style: normal;
-  src: url("../fonts/Rokkitt/Rokkitt-Medium.eot");
-  src: url("../fonts/Rokkitt/Rokkitt-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Rokkitt/Rokkitt-Medium.woff") format("woff"), url("../fonts/Rokkitt/Rokkitt-Medium.ttf") format("truetype"); }
+/* Navigation */
+.menu-toggle {
+  position: relative;
+  top: 27px;
+  left: 91%;
+  margin-right: 50px;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+  border: none;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  -webkit-box-shadow: 3px 3px 3px grey;
+          box-shadow: 3px 3px 3px grey;
+  background-color: #5C5F63; }
 
-@font-face {
-  font-family: "roboto-example";
-  font-weight: light;
-  font-style: normal;
-  src: url("../fonts/Rokkitt/Rokkitt-Light.eot");
-  src: url("../fonts/Rokkitt/Rokkitt-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Rokkitt/Rokkitt-Light.woff") format("woff"), url("../fonts/Rokkitt/Rokkitt-Light.ttf") format("truetype"); }
+.menu-toggle:hover {
+  -webkit-box-shadow: 2px 2px 2px grey;
+          box-shadow: 2px 2px 2px grey;
+  background-color: #4A4D50; }
 
-@font-face {
-  font-family: "roboto-example";
-  font-weight: bold;
-  font-style: normal;
-  src: url("../fonts/Rokkitt/Rokkitt-Bold.eot");
-  src: url("../fonts/Rokkitt/Rokkitt-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Rokkitt/Rokkitt-Bold.woff") format("woff"), url("../fonts/Rokkitt/Rokkitt-Bold.ttf") format("truetype"); }
+.menu-toggle:hover span::before {
+  content: "\f0c9";
+  font-family: FontAwesome;
+  font-size: 22px;
+  color: #A61E00; }
 
-@font-face {
-  font-family: "roboto-example";
-  font-weight: medium;
-  font-style: normal;
-  src: url("../fonts/Yantramanav/Yantramanav-Medium.eot");
-  src: url("../fonts/Yantramanav/Yantramanav-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Yantramanav/Yantramanav-Medium.woff") format("woff"), url("../fonts/Yantramanav/Yantramanav-Medium.ttf") format("truetype"); }
+.menu-toggle:hover:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: #2D3F50; }
 
-@font-face {
-  font-family: "roboto-example";
-  font-weight: light;
-  font-style: normal;
-  src: url("../fonts/Yantramanav/Yantramanav-Light.eot");
-  src: url("../fonts/Yantramanav/Yantramanav-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Yantramanav/Yantramanav-Light.woff") format("woff"), url("../fonts/Yantramanav/Yantramanav-Light.ttf") format("truetype"); }
+.menu-toggle:hover:active span::before {
+  content: "\f0c9";
+  font-family: FontAwesome;
+  font-size: 22px;
+  color: #D34B2D; }
 
-@font-face {
-  font-family: "roboto-example";
-  font-weight: bold;
-  font-style: normal;
-  src: url("../fonts/Yantramanav/Yantramanav-Bold.eot");
-  src: url("../fonts/Yantramanav/Yantramanav-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Yantramanav/Yantramanav-Bold.woff") format("woff"), url("../fonts/Yantramanav/Yantramanav-Bold.ttf") format("truetype"); }
+.menu-toggle span {
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: relative;
+  top: -8px;
+  left: -8px; }
 
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+.menu-toggle span::before {
+  content: "\f0c9";
+  font-family: FontAwesome;
+  font-size: 22px;
+  color: #D02600; }
 
-*:before, *:after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+.main-navigation {
+  width: 100%;
+  min-width: 100%;
+  position: absolute;
+  -webkit-transform: translate(-5%, 80%);
+      -ms-transform: translate(-5%, 80%);
+          transform: translate(-5%, 80%);
+  vertical-align: middle;
+  z-index: 9999; }
 
-*::-webkit-input-placeholder {
-  color: #666;
-  opacity: 1; }
+/* End Menu */
+.fon-slider {
+  min-height: 200px; }
 
-*:-moz-placeholder {
-  color: #666;
-  opacity: 1; }
+.square {
+  width: 100%;
+  height: 200px;
+  background-image: url(../images/hannah.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #efefef;
+  -webkit-background-size: cover;
+          background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover; }
 
-*::-moz-placeholder {
-  color: #666;
-  opacity: 1; }
+.bottom-head {
+  -webkit-background-size: 100% 100%;
+          background-size: 100%;
+  background: url("../images/bg-head.jpg") repeat-y center center;
+  border-bottom: 1px #C0C7C0 solid;
+  -o-object-fit: cover;
+     object-fit: cover; }
 
-*:-ms-input-placeholder {
-  color: #666;
-  opacity: 1; }
+.bread {
+  padding-top: 4px;
+  font-family: 'Comfortaa', cursive;
+  font-size: 13px !important;
+  font-weight: 300; }
 
-/*==========  Desktop First  ==========*/
-/* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {
-  /**/ }
+.bread .breadcrumbs {
+  border: 10px solid transparent;
+  -webkit-border-image: url("../images/line-shadow.png");
+       -o-border-image: url("../images/line-shadow.png");
+          border-image: url("../images/line-shadow.png"); }
 
-/* Medium Devices, Desktops */
-@media only screen and (max-width: 992px) {
-  /**/ }
+.bread span {
+  margin-left: 3px; }
 
-/* Small Devices, Tablets */
-@media only screen and (max-width: 768px) {
-  /**/ }
+.bread span.first-item {
+  margin-left: 10px; }
 
-/* Extra Small Devices, Phones */
-@media only screen and (max-width: 480px) {
-  /**/ }
+.bread span.first-item a {
+  margin-top: 20px;
+  padding-bottom: 1px;
+  text-decoration: none;
+  color: #55655D; }
 
-/* Custom, iPhone Retina */
-@media only screen and (max-width: 320px) {
-  /**/ }
+.bread span.first-item a:hover {
+  -webkit-transition: .15s ease-out;
+  -o-transition: .15s ease-out;
+  transition: .15s ease-out;
+  -webkit-transition-delay: 0.3s;
+       -o-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  color: #77C177;
+  border-bottom: 1px #77C177 solid; }
 
-/*==========  Mobile First  ==========*/
-/* Custom, iPhone Retina */
-@media only screen and (min-width: 320px) {
-  /**/ }
+.bread span.separator {
+  color: #77C177; }
 
-/* Extra Small Devices, Phones */
-@media only screen and (min-width: 480px) {
-  /**/ }
+.bread span.last-item {
+  color: #77C177; }
 
-/* Small Devices, Tablets */
-@media only screen and (min-width: 768px) {
-  /**/ }
+.input-search form {
+  text-align: right;
+  margin: 17px; }
 
-/* Medium Devices, Desktops */
-@media only screen and (min-width: 992px) {
-  /**/ }
+/* Header Navigate */
+#primary-menu.menu.nav-menu[aria-expanded='false'] {
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style: none;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  float: right;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  vertical-align: middle; }
 
-/* Large Devices, Wide Screens */
-@media only screen and (min-width: 1200px) {
-  /**/ }
+#primary-menu.menu.nav-menu[aria-expanded='false'] li {
+  position: relative;
+  border-right: 1px solid #1f6f93;
+  /* Sub-Menu */ }
+
+#primary-menu.menu.nav-menu[aria-expanded='false'] li a {
+  display: block;
+  background-color: #efcfce;
+  padding: 5px 30px;
+  font-size: 14px;
+  color: #454545;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+#primary-menu.menu.nav-menu[aria-expanded='false'] li i.fa {
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  font-size: 18px; }
+
+#primary-menu.menu.nav-menu[aria-expanded='false'] li a:hover {
+  background-color: #454545;
+  color: #D1EAEA;
+  -webkit-box-shadow: 1px 5px 10px -5px grey;
+          box-shadow: 1px 5px 10px -5px grey;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+#primary-menu.menu.nav-menu[aria-expanded='false'] li ul {
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: absolute;
+  min-width: 200px;
+  display: none; }
+
+#primary-menu.menu.nav-menu[aria-expanded='false'] li ul li {
+  list-style: none; }
+
+#primary-menu.menu.nav-menu[aria-expanded='false'] li ul li a {
+  padding: 10px;
+  text-transform: none;
+  background-color: #ECECEC; }
+
+#primary-menu.menu.nav-menu[aria-expanded='false'] li ul li ul.sub-menu {
+  position: absolute;
+  right: 200px;
+  top: 0;
+  display: none; }
+
+#primary-menu.menu.nav-menu[aria-expanded='false'] li ul li ul.sub-menu li {
+  list-style: none; }
+
+#primary-menu.menu.nav-menu[aria-expanded='false'] li ul li ul.sub-menu li a {
+  padding: 10px;
+  text-transform: none;
+  background-color: #ECECEC; }
+
+#primary-menu.menu.nav-menu[aria-expanded='false'] li ul li ul.sub-menu li ul.sub-menu {
+  position: absolute;
+  right: 200px;
+  top: 0;
+  display: none; }
+
+#primary-menu.menu.nav-menu[aria-expanded='false'] li ul li ul.sub-menu li:hover ul {
+  display: block; }
+
+#primary-menu.menu.nav-menu[aria-expanded='false'] li ul li:hover ul {
+  display: block; }
+
+#primary-menu.menu.nav-menu[aria-expanded='false'] li:hover ul {
+  display: block; }
+
+/* ------------------------------------------ */
+/* ----- От маленьких экранов к большим ----- */
+/* ------------------------------------------ */
+/* Стили для очень маленьких экранов (телефоны в книжной ориентации,
+дисплей менее 576 пикселей). Записываются без медиа-запросов,
+поскольку в Bootstrap это значение по умолчанию */
+/* Стили для маленьких экранов (телефоны в альбомной ориентации,
+дисплей 576 пикселей и более) */
+/* Стили для средних экранов (планшеты, дисплей 768 пикселей и более) */
+/* Стили для больших экранов (ПК, дисплей 992 пикселей и более) */
+@media (min-width: 992px) {
+  .main-navigation ul {
+    display: block; }
+  /* ================= */
+  button.menu-toggle {
+    display: none; } }
+
+/* Стили для очень больших экранов (ПК с большим монитором,
+дисплей 1200 пикселей и более) */
+/* ------------------------------------------ */
+/*------ От больших экранов к маленьким ------*/
+/* ------------------------------------------ */
+/* Стили для очень больших экранов (дисплей 1200 пикселей и более).
+Записываются без медиа-запросов, так как контрольная точка
+для очень больших экранов не имеет верхней границы по ширине */
+/* Стили для больших экранов (дисплей максимум 1199 пикселей) */
+/* Стили для средних экранов (дисплей максимум 991 пикселей) */
+@media (max-width: 991px) {
+  .main-navigation ul {
+    display: none; }
+  .nav-menu {
+    margin: 0;
+    padding: 0; }
+  .nav-menu .menu-toggle {
+    display: block; } }
+
+/* Стили для маленьких экранов (дисплей максимум 767 пикселей) */
+/* Стили для очень маленьких экранов (дисплей максимум 575 пикселей) */

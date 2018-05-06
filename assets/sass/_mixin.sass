@@ -4,6 +4,18 @@
   color: rgb(207, 98, 19)
   font-weight: bold
 
+@mixin reset
+  margin: 0
+  padding: 0
+  border: none
+
+@mixin link
+  transition: .15s ease-out
+  transition-delay: 0.3s
+
+@mixin shot
+  transition-timing-function: (0.42,0,0.58,1) ease-in-out
+
 // чистая кнопка
 @mixin press ($bg-color)
   display: inline-block

@@ -32,12 +32,14 @@
     "gulp-imagemin": "^4.1.0",
     "gulp-notify": "^3.2.0",
     "gulp-rename": "^1.2.2",
+    "gulp-require-modules": "^1.1.2",
     "gulp-rsync": "0.0.8",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
     "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap-sass": "^3.3.7",
+    "sass-fonts": "^1.1.1"
   }
 }

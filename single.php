@@ -7,7 +7,7 @@
  * @package vergy
  */
 
-get_header();
+get_header('v1');
 ?>
 
 	<div id="primary" class="content-area">
