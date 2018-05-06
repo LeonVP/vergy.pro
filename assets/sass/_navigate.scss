@@ -1,7 +1,9 @@
 /* Header Navigate */
 
+
 #primary-menu.menu.nav-menu[aria-expanded='false'] {
   @include reset;
+  margin-top: 3px;
   list-style: none;
   position: relative;
   display: flex;
@@ -10,13 +12,15 @@
   vertical-align: middle;
   li {
     position: relative;
-    border-right: 1px solid #1f6f93;
     a {
       display: block;
-      background-color: #efcfce;
-      padding: 5px 30px;
-      font-size: 14px;
+      padding: 5px 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: .7rem !important;
+      font-weight: 300;
+      letter-spacing: 0.12em;
       color: #454545;
+      border-radius: 5px;
       text-decoration: none;
       text-transform: uppercase;
       transition: all 0.3s ease;
@@ -28,11 +32,12 @@
       font-size: 18px;
     }
     a:hover {
-      background-color: #454545;
-      color: #D1EAEA;
+      color: #77C177;
       box-shadow: 1px 5px 10px -5px grey;
       transition: all 0.3s ease;
     }
+
+
 /* Sub-Menu */
     ul {
       @include reset;
@@ -44,7 +49,16 @@
         a {
           padding: 10px;
           text-transform: none;
-          background-color: #ECECEC;
+          background-color: #FFF;
+          border-radius: 0;
+          opacity: 0.6;
+        }
+        a:hover {
+          background-color: #EAEDE8;
+          color: #CD6204;
+          box-shadow: 1px 5px 10px -5px grey;
+          transition: all 0.3s ease;
+          opacity: 0.9;
         }
         ul.sub-menu {
           position: absolute;
@@ -56,18 +70,44 @@
             a {
               padding: 10px;
               text-transform: none;
-              background-color: #ECECEC;
+              background-color: #FFF;
+              border-radius: 0;
+              opacity: 0.6;
+            }
+            a:hover {
+              background-color: #EAEDE8;
+              color: #CD6204;
+              box-shadow: 1px 5px 10px -5px grey;
+              transition: all 0.3s ease;
+              opacity: 0.9;
             }
             ul.sub-menu {
               position: absolute;
               right: 200px;
               top: 0;
               display: none;
-            }
-          }
-          li:hover {
-            ul {
-              display: block;
+              li {
+                list-style: none;
+                a {
+                  padding: 10px;
+                  text-transform: none;
+                  background-color: #FFF;
+                  border-radius: 0;
+                  opacity: 0.6;
+                }
+                a:hover {
+                  background-color: #EAEDE8;
+                  color: #CD6204;
+                  box-shadow: 1px 5px 10px -5px grey;
+                  transition: all 0.3s ease;
+                  opacity: 0.9;
+                }
+              }
+              li:hover {
+                ul {
+                  display: block;
+                }
+              }
             }
           }
         }
@@ -84,5 +124,10 @@
       display: block;
     }
   }
-
+  li:first-child {
+    border-left: none;
+  }
+  li:last-child {
+    border-right: none;
+  };
 }

@@ -62,7 +62,7 @@
 		</div><!-- .row fon-slider -->
 	<div class="row bottom-head">
 		<div class="col-md-8 bread">
-			<?php if( function_exists('fw_ext_breadcrumbs') ) { fw_ext_breadcrumbs(); } ?>
+            <?php if( function_exists('fw_ext_breadcrumbs') ) { fw_ext_breadcrumbs(); } ?>
 		</div>	<!-- .col-8 breadcrumbs -->
 		<div class="col-6 col-md-4 input-search">
 			<form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
